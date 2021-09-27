@@ -40,27 +40,51 @@ def brincar_de_plim(fim):
         else:
             print('{:0>3}'.format(numero))
 
-
 #estrutura de identificação / execução de script
 if __name__ == '__main__':
-    print_hi('Cris')
-    #chamar a função de Cálculo da área do retângulo
-    resultado = calcular_area_do_retangulo(3,4)
-    print(f'A área do retângulo é de {resultado} m²')
+    resposta = 'C'
 
-    #chamar a função de Cálculo da área do quadrado
-    resultado = calcular_area_do_quadrado(4)
-    print(f'A área do quadrado é de {resultado} m²')
+    while resposta.upper() != 'Z':
+        print('#####################################')
+        print ('##                                ##')
+        print ('#       MENU  DE  OPÇÕES           #')
+        print('##                                 ##')
+        print('#    1 - Olá Mundo                  #')
+        print('#    2 - Área do Retângulo          #')
+        print('#    3 - Área do Quadrado           #')
+        print('#    4 - Área do Triângulo          #')
+        print('#    5 - Contagem Progressiva       #')
+        print('#    6 - Apoiar Candidato           #')
+        print('#    7 - Brincar de Plim            #')
+        print('##                                 ##')
+        print('#    Z - Sair                       #')
+        print ('##                                ##')
+        print('#####################################')
 
-    #chamar a função de Cálculo da área do triangulo
-    resultado = calcular_area_do_triangulo(6,7)
-    print(f'A área do triângulo é de {resultado} m²')
+    resposta = input('Escolha sua opção')
+    print(f'A sua escolha foi: {resposta}')
 
-    #executar uma contagem progressiva
-    contagem_progressiva(11)
+    if resposta.upper() != 'Z':
+        if resposta == '1':
+            print_hi('Cris')
+        elif resposta == '2':
+            resultado =calcular_area_do_retangulo(8,7)
+            print(f"A área do retângulo é de {resultado}m2")
+        elif resposta == '3':
+            resultado =calcular_area_do_quadrado(6)
+            print(f"A área do quadrado é de {resultado}m2")
+        elif resposta == '4':
+            resultado =calcular_area_do_triangulo(4,6)
+            print(f"A área do triângulo é de {resultado}m2")
+        elif resposta == '5':
+            contagem_progressiva(10)
+        elif resposta == '6':
+            apoiar_candidato("Murphy", 13)
+        elif resposta == '7':
+            brincar_de_plim(7)
+        else:
+            print("Você digitou uma opção inválida. Escolha uma opção de 1 a 7")
+    else:
+        print("Você escolheu sair. Volte Sempre!")
 
-    #exibir o nome do candidato várias vezes
-    apoiar_candidato('Faker',100)
 
-    #brincar de PLIM
-    brincar_de_plim(100)
